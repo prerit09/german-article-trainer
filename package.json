@@ -7,7 +7,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "dev": "vite",
-    "build": "npx vite build",
+    "build": "npm exec vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
