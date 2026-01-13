@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function App() {
   const [words, setWords] = useState([]);
   const [page, setPage] = useState("home"); // home | quiz | review
-  const [mode, setMode] = useState("quiz");
+  const [mode, setMode] = useState("quiz"); // quiz | review
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showEnglish, setShowEnglish] = useState(false);
@@ -15,20 +15,27 @@ export default function App() {
   const [newListName, setNewListName] = useState("");
   const [showSaveList, setShowSaveList] = useState(false);
   const [currentReviewWords, setCurrentReviewWords] = useState([]);
+  const [quizWords, setQuizWords] = useState([]);
+
+  const CHUNK_SIZE = 25;
 
   // Load JSON words
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "data/german-a1-nouns.json")
+    fetch(import.meta.env.BASE_URL + "data/a1-nouns.json")
       .then(res => res.json())
       .then(setWords)
       .catch(err => console.error("Failed to load words", err));
   }, []);
 
-  if (words.length === 0) {
-    return <p style={{ textAlign: "center" }}>Loading words…</p>;
-  }
+  if (words.length === 0) return <p style={{ textAlign: "center" }}>Loading words…</p>;
 
-  function startQuiz() {
+  const totalChunks = Math.ceil(words.length / CHUNK_SIZE);
+
+  // ------------------ Quiz & Review functions ------------------
+  function startQuiz(chunkIndex = 0) {
+    const start = chunkIndex * CHUNK_SIZE;
+    const end = start + CHUNK_SIZE;
+    setQuizWords(words.slice(start, end));
     setPage("quiz");
     setMode("quiz");
     setIndex(0);
@@ -38,11 +45,11 @@ export default function App() {
   }
 
   function startReview(list) {
+    setCurrentReviewWords(list.words);
     setPage("review");
     setMode("review");
-    setCurrentReviewWords(list.words);
     setIndex(0);
-    setAttemptedWords([]);
+    setAttemptedWords([]); // clear previous attempts
     setSelected(null);
     setShowEnglish(false);
   }
@@ -61,15 +68,17 @@ export default function App() {
   }
 
   function currentWord() {
-    return mode === "quiz" ? words[index] : currentReviewWords[index];
+    return mode === "quiz" ? quizWords[index] : currentReviewWords[index];
   }
 
   function chooseArticle(article) {
     if (selected) return;
     setSelected(article);
+
+    // For nouns, store selected article
     setAttemptedWords(prev => [
       ...prev,
-      { ...currentWord(), selected: article, addToList: false }
+      { ...currentWord(), selected: currentWord().article ? article : null, addToList: false }
     ]);
   }
 
@@ -117,13 +126,20 @@ export default function App() {
     setNewListName("");
   }
 
-  // HOME
+  // ------------------ HOME PAGE ------------------
   if (page === "home") {
     return (
       <div style={styles.outer}>
         <div style={styles.container}>
           <h1>German A1 Trainer</h1>
-          <button onClick={startQuiz}>Start Quiz</button>
+          <h3>Start Quiz (Chunks of 25 words)</h3>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 20 }}>
+            {Array.from({ length: totalChunks }).map((_, i) => (
+              <button key={i} onClick={() => startQuiz(i)}>
+                Words {i * CHUNK_SIZE + 1} - {Math.min((i + 1) * CHUNK_SIZE, words.length)}
+              </button>
+            ))}
+          </div>
 
           {reviewLists.length > 0 && (
             <div style={{ marginTop: 30 }}>
@@ -144,8 +160,8 @@ export default function App() {
 
   const word = currentWord();
 
-  // FINISHED
-  if ((mode === "quiz" && index >= words.length) ||
+  // ------------------ FINISHED ------------------
+  if ((mode === "quiz" && index >= quizWords.length) ||
       (mode === "review" && index >= currentReviewWords.length)) {
     return (
       <div style={styles.outer}>
@@ -189,7 +205,7 @@ export default function App() {
     );
   }
 
-  // QUIZ / REVIEW
+  // ------------------ QUIZ WORD ------------------
   return (
     <div style={styles.outer}>
       <div style={styles.container}>
@@ -217,9 +233,9 @@ export default function App() {
           <>
             <p>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
-              <button onClick={() => setShowEnglish(true)}>Show English + Plural</button>
+              <button onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
-              <p>{word.english} · Plural: {word.plural}</p>
+              <p>{word.english}</p>
             )}
             <button onClick={nextWord}>Next</button>
           </>

@@ -1,6 +1,6 @@
 import json
 
-input_file="a1_words_output.json"
+input_file="a1_nouns_output.json"
 output_file = "a1_nouns_clean.json"
 
 with open(input_file, "r", encoding="utf-8") as f:

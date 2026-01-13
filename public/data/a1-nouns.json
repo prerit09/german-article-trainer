@@ -1,0 +1,2318 @@
+[
+  {
+    "id": 1,
+    "noun": "Mal",
+    "article": "das",
+    "english": "time (as in 'one time';'many times')"
+  },
+  {
+    "id": 2,
+    "noun": "Zeit",
+    "article": "die",
+    "english": "time"
+  },
+  {
+    "id": 3,
+    "noun": "Jahr",
+    "article": "das",
+    "english": "year"
+  },
+  {
+    "id": 4,
+    "noun": "Mann",
+    "article": "der",
+    "english": "man;husband"
+  },
+  {
+    "id": 5,
+    "noun": "Tag",
+    "article": "der",
+    "english": "day"
+  },
+  {
+    "id": 6,
+    "noun": "Deutsch",
+    "article": "das",
+    "english": "German (language)"
+  },
+  {
+    "id": 7,
+    "noun": "Ende",
+    "article": "das",
+    "english": "end"
+  },
+  {
+    "id": 8,
+    "noun": "Uhr",
+    "article": "die",
+    "english": "clock;o'clock"
+  },
+  {
+    "id": 9,
+    "noun": "Frau",
+    "article": "die",
+    "english": "woman;wife;Mrs."
+  },
+  {
+    "id": 10,
+    "noun": "Stadt",
+    "article": "die",
+    "english": "city;town"
+  },
+  {
+    "id": 11,
+    "noun": "Leute",
+    "article": "die",
+    "english": "people"
+  },
+  {
+    "id": 12,
+    "noun": "Kind",
+    "article": "das",
+    "english": "child"
+  },
+  {
+    "id": 13,
+    "noun": "Geld",
+    "article": "das",
+    "english": "money"
+  },
+  {
+    "id": 14,
+    "noun": "Teil",
+    "article": "der",
+    "english": "part"
+  },
+  {
+    "id": 15,
+    "noun": "Arbeit",
+    "article": "die",
+    "english": "work;job"
+  },
+  {
+    "id": 16,
+    "noun": "Frage",
+    "article": "die",
+    "english": "question"
+  },
+  {
+    "id": 17,
+    "noun": "Seite",
+    "article": "die",
+    "english": "page;side"
+  },
+  {
+    "id": 18,
+    "noun": "Spiel",
+    "article": "das",
+    "english": "game;play"
+  },
+  {
+    "id": 19,
+    "noun": "Land",
+    "article": "das",
+    "english": "country;land"
+  },
+  {
+    "id": 20,
+    "noun": "Platz",
+    "article": "der",
+    "english": "place;space;square"
+  },
+  {
+    "id": 21,
+    "noun": "Morgen",
+    "article": "der",
+    "english": "morning"
+  },
+  {
+    "id": 22,
+    "noun": "Morgen",
+    "article": "der",
+    "english": "morning"
+  },
+  {
+    "id": 23,
+    "noun": "Euro",
+    "article": "der",
+    "english": "Euro"
+  },
+  {
+    "id": 24,
+    "noun": "Familie",
+    "article": "die",
+    "english": "family"
+  },
+  {
+    "id": 25,
+    "noun": "Haus",
+    "article": "das",
+    "english": "house"
+  },
+  {
+    "id": 26,
+    "noun": "Bild",
+    "article": "das",
+    "english": "picture"
+  },
+  {
+    "id": 27,
+    "noun": "Minute",
+    "article": "die",
+    "english": "minute"
+  },
+  {
+    "id": 28,
+    "noun": "Polizei",
+    "article": "die",
+    "english": "police"
+  },
+  {
+    "id": 29,
+    "noun": "Woche",
+    "article": "die",
+    "english": "week"
+  },
+  {
+    "id": 30,
+    "noun": "Name",
+    "article": "der",
+    "english": "name"
+  },
+  {
+    "id": 31,
+    "noun": "Problem",
+    "article": "das",
+    "english": "problem"
+  },
+  {
+    "id": 32,
+    "noun": "Nacht",
+    "article": "die",
+    "english": "night"
+  },
+  {
+    "id": 33,
+    "noun": "Stunde",
+    "article": "die",
+    "english": "hour"
+  },
+  {
+    "id": 34,
+    "noun": "Schule",
+    "article": "die",
+    "english": "school"
+  },
+  {
+    "id": 35,
+    "noun": "Abend",
+    "article": "der",
+    "english": "evening"
+  },
+  {
+    "id": 36,
+    "noun": "Musik",
+    "article": "die",
+    "english": "music"
+  },
+  {
+    "id": 37,
+    "noun": "Wasser",
+    "article": "das",
+    "english": "water"
+  },
+  {
+    "id": 38,
+    "noun": "Auto",
+    "article": "das",
+    "english": "car"
+  },
+  {
+    "id": 39,
+    "noun": "Hand",
+    "article": "die",
+    "english": "hand"
+  },
+  {
+    "id": 40,
+    "noun": "Kopf",
+    "article": "der",
+    "english": "head"
+  },
+  {
+    "id": 41,
+    "noun": "Person",
+    "article": "die",
+    "english": "person"
+  },
+  {
+    "id": 42,
+    "noun": "Alter",
+    "article": "das",
+    "english": "age"
+  },
+  {
+    "id": 43,
+    "noun": "Anfang",
+    "article": "der",
+    "english": "beginning"
+  },
+  {
+    "id": 44,
+    "noun": "Mutter",
+    "article": "die",
+    "english": "mother"
+  },
+  {
+    "id": 45,
+    "noun": "Auge",
+    "article": "das",
+    "english": "eye"
+  },
+  {
+    "id": 46,
+    "noun": "Glück",
+    "article": "das",
+    "english": "luck;happiness"
+  },
+  {
+    "id": 47,
+    "noun": "Herr",
+    "article": "der",
+    "english": "Mr.;sir;gentleman"
+  },
+  {
+    "id": 48,
+    "noun": "Hilfe",
+    "article": "die",
+    "english": "help;aid"
+  },
+  {
+    "id": 49,
+    "noun": "Film",
+    "article": "der",
+    "english": "film;movie"
+  },
+  {
+    "id": 50,
+    "noun": "Buch",
+    "article": "das",
+    "english": "book"
+  },
+  {
+    "id": 51,
+    "noun": "Ding",
+    "article": "das",
+    "english": "thing"
+  },
+  {
+    "id": 52,
+    "noun": "Sohn",
+    "article": "der",
+    "english": "son"
+  },
+  {
+    "id": 53,
+    "noun": "Spaß",
+    "article": "der",
+    "english": "fun"
+  },
+  {
+    "id": 54,
+    "noun": "Wort",
+    "article": "das",
+    "english": "word"
+  },
+  {
+    "id": 55,
+    "noun": "Mädchen",
+    "article": "das",
+    "english": "girl"
+  },
+  {
+    "id": 56,
+    "noun": "Vater",
+    "article": "der",
+    "english": "father"
+  },
+  {
+    "id": 57,
+    "noun": "Idee",
+    "article": "die",
+    "english": "idea"
+  },
+  {
+    "id": 58,
+    "noun": "Freund",
+    "article": "der",
+    "english": "friend (male)"
+  },
+  {
+    "id": 59,
+    "noun": "Klasse",
+    "article": "die",
+    "english": "class;grade"
+  },
+  {
+    "id": 60,
+    "noun": "Preis",
+    "article": "der",
+    "english": "price;prize"
+  },
+  {
+    "id": 61,
+    "noun": "März",
+    "article": "der",
+    "english": "March"
+  },
+  {
+    "id": 62,
+    "noun": "Junge",
+    "article": "der",
+    "english": "boy"
+  },
+  {
+    "id": 63,
+    "noun": "Moment",
+    "article": "der",
+    "english": "moment"
+  },
+  {
+    "id": 64,
+    "noun": "April",
+    "article": "der",
+    "english": "April"
+  },
+  {
+    "id": 65,
+    "noun": "Juli",
+    "article": "der",
+    "english": "July"
+  },
+  {
+    "id": 66,
+    "noun": "Juni",
+    "article": "der",
+    "english": "June"
+  },
+  {
+    "id": 67,
+    "noun": "Oktober",
+    "article": "der",
+    "english": "October"
+  },
+  {
+    "id": 68,
+    "noun": "F",
+    "article": "das",
+    "english": "F (letter)"
+  },
+  {
+    "id": 69,
+    "noun": "Stück",
+    "article": "das",
+    "english": "piece;bit;item"
+  },
+  {
+    "id": 70,
+    "noun": "Sommer",
+    "article": "der",
+    "english": "summer"
+  },
+  {
+    "id": 71,
+    "noun": "Tochter",
+    "article": "die",
+    "english": "daughter"
+  },
+  {
+    "id": 72,
+    "noun": "Wohnung",
+    "article": "die",
+    "english": "apartment"
+  },
+  {
+    "id": 73,
+    "noun": "Sprache",
+    "article": "die",
+    "english": "language"
+  },
+  {
+    "id": 74,
+    "noun": "Bad",
+    "article": "das",
+    "english": "bath;bathroom"
+  },
+  {
+    "id": 75,
+    "noun": "Fehler",
+    "article": "der",
+    "english": "mistake;error"
+  },
+  {
+    "id": 76,
+    "noun": "Meter",
+    "article": "der",
+    "english": "meter"
+  },
+  {
+    "id": 77,
+    "noun": "Km",
+    "article": "der",
+    "english": "kilometer(s)"
+  },
+  {
+    "id": 78,
+    "noun": "Tv",
+    "article": "der",
+    "english": "TV;television"
+  },
+  {
+    "id": 79,
+    "noun": "Antwort",
+    "article": "die",
+    "english": "answer"
+  },
+  {
+    "id": 80,
+    "noun": "Bahn",
+    "article": "die",
+    "english": "train;railway;path"
+  },
+  {
+    "id": 81,
+    "noun": "Dezember",
+    "article": "der",
+    "english": "December"
+  },
+  {
+    "id": 82,
+    "noun": "Gesicht",
+    "article": "das",
+    "english": "face"
+  },
+  {
+    "id": 83,
+    "noun": "Monat",
+    "article": "der",
+    "english": "month"
+  },
+  {
+    "id": 84,
+    "noun": "Januar",
+    "article": "der",
+    "english": "January"
+  },
+  {
+    "id": 85,
+    "noun": "Foto",
+    "article": "das",
+    "english": "photo"
+  },
+  {
+    "id": 86,
+    "noun": "Bruder",
+    "article": "der",
+    "english": "brother"
+  },
+  {
+    "id": 87,
+    "noun": "Februar",
+    "article": "der",
+    "english": "February"
+  },
+  {
+    "id": 88,
+    "noun": "Fußball",
+    "article": "der",
+    "english": "football;soccer"
+  },
+  {
+    "id": 89,
+    "noun": "Sonntag",
+    "article": "der",
+    "english": "Sunday"
+  },
+  {
+    "id": 90,
+    "noun": "Punkt",
+    "article": "der",
+    "english": "point;dot;period"
+  },
+  {
+    "id": 91,
+    "noun": "Freundin",
+    "article": "die",
+    "english": "girlfriend;female friend"
+  },
+  {
+    "id": 92,
+    "noun": "Licht",
+    "article": "das",
+    "english": "light"
+  },
+  {
+    "id": 93,
+    "noun": "Markt",
+    "article": "der",
+    "english": "market"
+  },
+  {
+    "id": 94,
+    "noun": "Schüler",
+    "article": "der",
+    "english": "student"
+  },
+  {
+    "id": 95,
+    "noun": "Text",
+    "article": "der",
+    "english": "text"
+  },
+  {
+    "id": 96,
+    "noun": "Zeitung",
+    "article": "die",
+    "english": "newspaper"
+  },
+  {
+    "id": 97,
+    "noun": "Sport",
+    "article": "der",
+    "english": "sport"
+  },
+  {
+    "id": 98,
+    "noun": "Zimmer",
+    "article": "das",
+    "english": "room"
+  },
+  {
+    "id": 99,
+    "noun": "Wochenende",
+    "article": "das",
+    "english": "weekend"
+  },
+  {
+    "id": 100,
+    "noun": "Bett",
+    "article": "das",
+    "english": "bed"
+  },
+  {
+    "id": 101,
+    "noun": "Samstag",
+    "article": "der",
+    "english": "Saturday"
+  },
+  {
+    "id": 102,
+    "noun": "Aufgabe",
+    "article": "die",
+    "english": "task;assignment"
+  },
+  {
+    "id": 103,
+    "noun": "Lehrer",
+    "article": "der",
+    "english": "teacher"
+  },
+  {
+    "id": 104,
+    "noun": "Bank",
+    "article": "die",
+    "english": "bench"
+  },
+  {
+    "id": 105,
+    "noun": "Cm",
+    "article": "der",
+    "english": "centimeter"
+  },
+  {
+    "id": 106,
+    "noun": "Freitag",
+    "article": "der",
+    "english": "Friday"
+  },
+  {
+    "id": 107,
+    "noun": "Hotel",
+    "article": "das",
+    "english": "hotel"
+  },
+  {
+    "id": 108,
+    "noun": "Zug",
+    "article": "der",
+    "english": "train"
+  },
+  {
+    "id": 109,
+    "noun": "Nummer",
+    "article": "die",
+    "english": "number"
+  },
+  {
+    "id": 110,
+    "noun": "Tür",
+    "article": "die",
+    "english": "door"
+  },
+  {
+    "id": 111,
+    "noun": "Besuch",
+    "article": "der",
+    "english": "visit"
+  },
+  {
+    "id": 112,
+    "noun": "Post",
+    "article": "die",
+    "english": "mail;post office"
+  },
+  {
+    "id": 113,
+    "noun": "Fenster",
+    "article": "das",
+    "english": "window"
+  },
+  {
+    "id": 114,
+    "noun": "Montag",
+    "article": "der",
+    "english": "Monday"
+  },
+  {
+    "id": 115,
+    "noun": "Arzt",
+    "article": "der",
+    "english": "doctor"
+  },
+  {
+    "id": 116,
+    "noun": "Hund",
+    "article": "der",
+    "english": "dog"
+  },
+  {
+    "id": 117,
+    "noun": "Karte",
+    "article": "die",
+    "english": "map;card;ticket"
+  },
+  {
+    "id": 118,
+    "noun": "Sonne",
+    "article": "die",
+    "english": "sun"
+  },
+  {
+    "id": 119,
+    "noun": "Tier",
+    "article": "das",
+    "english": "animal"
+  },
+  {
+    "id": 120,
+    "noun": "Handy",
+    "article": "das",
+    "english": "mobile phone;cell phone"
+  },
+  {
+    "id": 121,
+    "noun": "Kaffee",
+    "article": "der",
+    "english": "coffee"
+  },
+  {
+    "id": 122,
+    "noun": "Winter",
+    "article": "der",
+    "english": "winter"
+  },
+  {
+    "id": 123,
+    "noun": "Tisch",
+    "article": "der",
+    "english": "table"
+  },
+  {
+    "id": 124,
+    "noun": "Bier",
+    "article": "das",
+    "english": "beer"
+  },
+  {
+    "id": 125,
+    "noun": "Fuß",
+    "article": "der",
+    "english": "foot"
+  },
+  {
+    "id": 126,
+    "noun": "Kilometer",
+    "article": "der",
+    "english": "kilometer"
+  },
+  {
+    "id": 127,
+    "noun": "Wald",
+    "article": "der",
+    "english": "forest;wood"
+  },
+  {
+    "id": 128,
+    "noun": "Sekunde",
+    "article": "die",
+    "english": "second"
+  },
+  {
+    "id": 129,
+    "noun": "Geburtstag",
+    "article": "der",
+    "english": "birthday"
+  },
+  {
+    "id": 130,
+    "noun": "Schwester",
+    "article": "die",
+    "english": "sister"
+  },
+  {
+    "id": 131,
+    "noun": "Telefon",
+    "article": "das",
+    "english": "telephone"
+  },
+  {
+    "id": 132,
+    "noun": "Wetter",
+    "article": "das",
+    "english": "weather"
+  },
+  {
+    "id": 133,
+    "noun": "Flughafen",
+    "article": "der",
+    "english": "airport"
+  },
+  {
+    "id": 134,
+    "noun": "Krankenhaus",
+    "article": "das",
+    "english": "hospital"
+  },
+  {
+    "id": 135,
+    "noun": "Mund",
+    "article": "der",
+    "english": "mouth"
+  },
+  {
+    "id": 136,
+    "noun": "Arm",
+    "article": "der",
+    "english": "arm"
+  },
+  {
+    "id": 137,
+    "noun": "Dorf",
+    "article": "das",
+    "english": "village"
+  },
+  {
+    "id": 138,
+    "noun": "Min",
+    "article": "die",
+    "english": "minute (informal abbreviation)"
+  },
+  {
+    "id": 139,
+    "noun": "Büro",
+    "article": "das",
+    "english": "office"
+  },
+  {
+    "id": 140,
+    "noun": "Farbe",
+    "article": "die",
+    "english": "color"
+  },
+  {
+    "id": 141,
+    "noun": "Garten",
+    "article": "der",
+    "english": "garden"
+  },
+  {
+    "id": 142,
+    "noun": "Kg",
+    "article": "das",
+    "english": "kilogram"
+  },
+  {
+    "id": 143,
+    "noun": "Lied",
+    "article": "das",
+    "english": "song"
+  },
+  {
+    "id": 144,
+    "noun": "Bus",
+    "article": "der",
+    "english": "bus"
+  },
+  {
+    "id": 145,
+    "noun": "Park",
+    "article": "der",
+    "english": "park"
+  },
+  {
+    "id": 146,
+    "noun": "Baby",
+    "article": "das",
+    "english": "baby"
+  },
+  {
+    "id": 147,
+    "noun": "Brief",
+    "article": "der",
+    "english": "letter"
+  },
+  {
+    "id": 148,
+    "noun": "Museum",
+    "article": "das",
+    "english": "museum"
+  },
+  {
+    "id": 149,
+    "noun": "Geschäft",
+    "article": "das",
+    "english": "shop;business"
+  },
+  {
+    "id": 150,
+    "noun": "Mittwoch",
+    "article": "der",
+    "english": "Wednesday"
+  },
+  {
+    "id": 151,
+    "noun": "Fahrer",
+    "article": "der",
+    "english": "driver"
+  },
+  {
+    "id": 152,
+    "noun": "Französisch",
+    "article": "das",
+    "english": "French (language)"
+  },
+  {
+    "id": 153,
+    "noun": "Mama",
+    "article": "die",
+    "english": "Mom"
+  },
+  {
+    "id": 154,
+    "noun": "Radio",
+    "article": "das",
+    "english": "radio"
+  },
+  {
+    "id": 155,
+    "noun": "Bahnhof",
+    "article": "der",
+    "english": "train station"
+  },
+  {
+    "id": 156,
+    "noun": "Küche",
+    "article": "die",
+    "english": "kitchen"
+  },
+  {
+    "id": 157,
+    "noun": "Beruf",
+    "article": "der",
+    "english": "profession;job"
+  },
+  {
+    "id": 158,
+    "noun": "Computer",
+    "article": "der",
+    "english": "computer"
+  },
+  {
+    "id": 159,
+    "noun": "Finger",
+    "article": "der",
+    "english": "finger"
+  },
+  {
+    "id": 160,
+    "noun": "Fleisch",
+    "article": "das",
+    "english": "meat"
+  },
+  {
+    "id": 161,
+    "noun": "Donnerstag",
+    "article": "der",
+    "english": "Thursday"
+  },
+  {
+    "id": 162,
+    "noun": "Student",
+    "article": "der",
+    "english": "student (male)"
+  },
+  {
+    "id": 163,
+    "noun": "Ball",
+    "article": "der",
+    "english": "ball"
+  },
+  {
+    "id": 164,
+    "noun": "Dienstag",
+    "article": "der",
+    "english": "Tuesday"
+  },
+  {
+    "id": 165,
+    "noun": "Wein",
+    "article": "der",
+    "english": "wine"
+  },
+  {
+    "id": 166,
+    "noun": "Kino",
+    "article": "das",
+    "english": "cinema;movie theater"
+  },
+  {
+    "id": 167,
+    "noun": "Nase",
+    "article": "die",
+    "english": "nose"
+  },
+  {
+    "id": 168,
+    "noun": "Pause",
+    "article": "die",
+    "english": "break;pause"
+  },
+  {
+    "id": 169,
+    "noun": "Regen",
+    "article": "der",
+    "english": "rain"
+  },
+  {
+    "id": 170,
+    "noun": "Baum",
+    "article": "der",
+    "english": "tree"
+  },
+  {
+    "id": 171,
+    "noun": "Berg",
+    "article": "der",
+    "english": "mountain;hill"
+  },
+  {
+    "id": 172,
+    "noun": "Haar",
+    "article": "das",
+    "english": "hair"
+  },
+  {
+    "id": 173,
+    "noun": "Schuh",
+    "article": "der",
+    "english": "shoe"
+  },
+  {
+    "id": 174,
+    "noun": "Glas",
+    "article": "das",
+    "english": "glass"
+  },
+  {
+    "id": 175,
+    "noun": "Konzert",
+    "article": "das",
+    "english": "concert"
+  },
+  {
+    "id": 176,
+    "noun": "Nachbar",
+    "article": "der",
+    "english": "neighbor"
+  },
+  {
+    "id": 177,
+    "noun": "Hamburger",
+    "article": "der",
+    "english": "hamburger"
+  },
+  {
+    "id": 178,
+    "noun": "Eis",
+    "article": "das",
+    "english": "ice;ice cream"
+  },
+  {
+    "id": 179,
+    "noun": "Papier",
+    "article": "das",
+    "english": "paper"
+  },
+  {
+    "id": 180,
+    "noun": "Bein",
+    "article": "das",
+    "english": "leg"
+  },
+  {
+    "id": 181,
+    "noun": "Rock",
+    "article": "der",
+    "english": "skirt"
+  },
+  {
+    "id": 182,
+    "noun": "Unterricht",
+    "article": "der",
+    "english": "lesson;class;instruction"
+  },
+  {
+    "id": 183,
+    "noun": "Adresse",
+    "article": "die",
+    "english": "address"
+  },
+  {
+    "id": 184,
+    "noun": "Nachmittag",
+    "article": "der",
+    "english": "afternoon"
+  },
+  {
+    "id": 185,
+    "noun": "Geschenk",
+    "article": "das",
+    "english": "gift;present"
+  },
+  {
+    "id": 186,
+    "noun": "Ei",
+    "article": "das",
+    "english": "egg"
+  },
+  {
+    "id": 187,
+    "noun": "Restaurant",
+    "article": "das",
+    "english": "restaurant"
+  },
+  {
+    "id": 188,
+    "noun": "Tasche",
+    "article": "die",
+    "english": "bag"
+  },
+  {
+    "id": 189,
+    "noun": "Milch",
+    "article": "die",
+    "english": "milk"
+  },
+  {
+    "id": 190,
+    "noun": "Brot",
+    "article": "das",
+    "english": "bread"
+  },
+  {
+    "id": 191,
+    "noun": "Frühstück",
+    "article": "das",
+    "english": "breakfast"
+  },
+  {
+    "id": 192,
+    "noun": "Stern",
+    "article": "der",
+    "english": "star"
+  },
+  {
+    "id": 193,
+    "noun": "Katze",
+    "article": "die",
+    "english": "cat"
+  },
+  {
+    "id": 194,
+    "noun": "Messer",
+    "article": "das",
+    "english": "knife"
+  },
+  {
+    "id": 195,
+    "noun": "Oma",
+    "article": "die",
+    "english": "grandma"
+  },
+  {
+    "id": 196,
+    "noun": "Fahrrad",
+    "article": "das",
+    "english": "bicycle"
+  },
+  {
+    "id": 197,
+    "noun": "Kuchen",
+    "article": "der",
+    "english": "cake"
+  },
+  {
+    "id": 198,
+    "noun": "Ohr",
+    "article": "das",
+    "english": "ear"
+  },
+  {
+    "id": 199,
+    "noun": "Flugzeug",
+    "article": "das",
+    "english": "airplane"
+  },
+  {
+    "id": 200,
+    "noun": "Hunger",
+    "article": "der",
+    "english": "hunger"
+  },
+  {
+    "id": 201,
+    "noun": "Papa",
+    "article": "der",
+    "english": "dad;daddy"
+  },
+  {
+    "id": 202,
+    "noun": "Koch",
+    "article": "der",
+    "english": "cook (person)"
+  },
+  {
+    "id": 203,
+    "noun": "Schnee",
+    "article": "der",
+    "english": "snow"
+  },
+  {
+    "id": 204,
+    "noun": "Tee",
+    "article": "der",
+    "english": "tea"
+  },
+  {
+    "id": 205,
+    "noun": "Fluss",
+    "article": "der",
+    "english": "river"
+  },
+  {
+    "id": 206,
+    "noun": "Hose",
+    "article": "die",
+    "english": "trousers;pants"
+  },
+  {
+    "id": 207,
+    "noun": "Kapitel",
+    "article": "das",
+    "english": "chapter"
+  },
+  {
+    "id": 208,
+    "noun": "Blume",
+    "article": "die",
+    "english": "flower"
+  },
+  {
+    "id": 209,
+    "noun": "Fuß",
+    "article": "der",
+    "english": "foot"
+  },
+  {
+    "id": 210,
+    "noun": "Pferd",
+    "article": "das",
+    "english": "horse"
+  },
+  {
+    "id": 211,
+    "noun": "Zucker",
+    "article": "der",
+    "english": "sugar"
+  },
+  {
+    "id": 212,
+    "noun": "Liter",
+    "article": "der",
+    "english": "liter"
+  },
+  {
+    "id": 213,
+    "noun": "Schlüssel",
+    "article": "der",
+    "english": "key"
+  },
+  {
+    "id": 214,
+    "noun": "Flasche",
+    "article": "die",
+    "english": "bottle"
+  },
+  {
+    "id": 215,
+    "noun": "Bibliothek",
+    "article": "die",
+    "english": "library"
+  },
+  {
+    "id": 216,
+    "noun": "Eingang",
+    "article": "der",
+    "english": "entrance"
+  },
+  {
+    "id": 217,
+    "noun": "Hut",
+    "article": "der",
+    "english": "hat"
+  },
+  {
+    "id": 218,
+    "noun": "Freizeit",
+    "article": "die",
+    "english": "leisure time;free time"
+  },
+  {
+    "id": 219,
+    "noun": "Cent",
+    "article": "der",
+    "english": "cent"
+  },
+  {
+    "id": 220,
+    "noun": "Decke",
+    "article": "die",
+    "english": "blanket"
+  },
+  {
+    "id": 221,
+    "noun": "Rose",
+    "article": "die",
+    "english": "rose"
+  },
+  {
+    "id": 222,
+    "noun": "Fernseher",
+    "article": "der",
+    "english": "television;TV set"
+  },
+  {
+    "id": 223,
+    "noun": "Fisch",
+    "article": "der",
+    "english": "fish"
+  },
+  {
+    "id": 224,
+    "noun": "Gemüse",
+    "article": "das",
+    "english": "vegetable(s)"
+  },
+  {
+    "id": 225,
+    "noun": "Heft",
+    "article": "das",
+    "english": "notebook"
+  },
+  {
+    "id": 226,
+    "noun": "Käse",
+    "article": "der",
+    "english": "cheese"
+  },
+  {
+    "id": 227,
+    "noun": "Salz",
+    "article": "das",
+    "english": "salt"
+  },
+  {
+    "id": 228,
+    "noun": "Shirt",
+    "article": "das",
+    "english": "shirt"
+  },
+  {
+    "id": 229,
+    "noun": "Zahn",
+    "article": "der",
+    "english": "tooth"
+  },
+  {
+    "id": 230,
+    "noun": "Kleid",
+    "article": "das",
+    "english": "dress"
+  },
+  {
+    "id": 231,
+    "noun": "Note",
+    "article": "die",
+    "english": "note;grade"
+  },
+  {
+    "id": 232,
+    "noun": "Pizza",
+    "article": "die",
+    "english": "pizza"
+  },
+  {
+    "id": 233,
+    "noun": "Buchstabe",
+    "article": "der",
+    "english": "letter (of the alphabet)"
+  },
+  {
+    "id": 234,
+    "noun": "Mittag",
+    "article": "der",
+    "english": "noon;midday"
+  },
+  {
+    "id": 235,
+    "noun": "Entschuldigung",
+    "article": "die",
+    "english": "apology;excuse"
+  },
+  {
+    "id": 236,
+    "noun": "Kindergarten",
+    "article": "der",
+    "english": "kindergarten"
+  },
+  {
+    "id": 237,
+    "noun": "Onkel",
+    "article": "der",
+    "english": "uncle"
+  },
+  {
+    "id": 238,
+    "noun": "Stuhl",
+    "article": "der",
+    "english": "chair"
+  },
+  {
+    "id": 239,
+    "noun": "Anruf",
+    "article": "der",
+    "english": "call;phone call"
+  },
+  {
+    "id": 240,
+    "noun": "Frühling",
+    "article": "der",
+    "english": "spring"
+  },
+  {
+    "id": 241,
+    "noun": "Hobby",
+    "article": "das",
+    "english": "hobby"
+  },
+  {
+    "id": 242,
+    "noun": "Jacke",
+    "article": "die",
+    "english": "jacket"
+  },
+  {
+    "id": 243,
+    "noun": "Lehrerin",
+    "article": "die",
+    "english": "female teacher"
+  },
+  {
+    "id": 244,
+    "noun": "Café",
+    "article": "das",
+    "english": "cafe;coffee shop"
+  },
+  {
+    "id": 245,
+    "noun": "Obst",
+    "article": "das",
+    "english": "fruit"
+  },
+  {
+    "id": 246,
+    "noun": "Spanisch",
+    "article": "das",
+    "english": "Spanish (language)"
+  },
+  {
+    "id": 247,
+    "noun": "Übung",
+    "article": "die",
+    "english": "exercise;practice"
+  },
+  {
+    "id": 248,
+    "noun": "Dusche",
+    "article": "die",
+    "english": "shower"
+  },
+  {
+    "id": 249,
+    "noun": "Maus",
+    "article": "die",
+    "english": "mouse"
+  },
+  {
+    "id": 250,
+    "noun": "Gitarre",
+    "article": "die",
+    "english": "guitar"
+  },
+  {
+    "id": 251,
+    "noun": "Kilo",
+    "article": "das",
+    "english": "kilogram;kilo"
+  },
+  {
+    "id": 252,
+    "noun": "Opa",
+    "article": "der",
+    "english": "grandpa"
+  },
+  {
+    "id": 253,
+    "noun": "Burger",
+    "article": "der",
+    "english": "burger"
+  },
+  {
+    "id": 254,
+    "noun": "Schokolade",
+    "article": "die",
+    "english": "chocolate"
+  },
+  {
+    "id": 255,
+    "noun": "Wohnzimmer",
+    "article": "das",
+    "english": "living room"
+  },
+  {
+    "id": 256,
+    "noun": "Koffer",
+    "article": "der",
+    "english": "suitcase"
+  },
+  {
+    "id": 257,
+    "noun": "Schlafzimmer",
+    "article": "das",
+    "english": "bedroom"
+  },
+  {
+    "id": 258,
+    "noun": "Butter",
+    "article": "die",
+    "english": "butter"
+  },
+  {
+    "id": 259,
+    "noun": "Schreibtisch",
+    "article": "der",
+    "english": "desk"
+  },
+  {
+    "id": 260,
+    "noun": "Tante",
+    "article": "die",
+    "english": "aunt"
+  },
+  {
+    "id": 261,
+    "noun": "Supermarkt",
+    "article": "der",
+    "english": "supermarket"
+  },
+  {
+    "id": 262,
+    "noun": "Tennis",
+    "article": "das",
+    "english": "tennis"
+  },
+  {
+    "id": 263,
+    "noun": "Taxi",
+    "article": "das",
+    "english": "taxi"
+  },
+  {
+    "id": 264,
+    "noun": "Zoo",
+    "article": "der",
+    "english": "zoo"
+  },
+  {
+    "id": 265,
+    "noun": "Abendessen",
+    "article": "das",
+    "english": "dinner"
+  },
+  {
+    "id": 266,
+    "noun": "Mittagessen",
+    "article": "das",
+    "english": "lunch"
+  },
+  {
+    "id": 267,
+    "noun": "Reis",
+    "article": "der",
+    "english": "rice"
+  },
+  {
+    "id": 268,
+    "noun": "Schrank",
+    "article": "der",
+    "english": "cupboard;wardrobe"
+  },
+  {
+    "id": 269,
+    "noun": "Spielzeug",
+    "article": "das",
+    "english": "toy"
+  },
+  {
+    "id": 270,
+    "noun": "Toilette",
+    "article": "die",
+    "english": "toilet;restroom"
+  },
+  {
+    "id": 271,
+    "noun": "Gramm",
+    "article": "das",
+    "english": "gram"
+  },
+  {
+    "id": 272,
+    "noun": "Kartoffel",
+    "article": "die",
+    "english": "potato"
+  },
+  {
+    "id": 273,
+    "noun": "Mathe",
+    "article": "die",
+    "english": "math"
+  },
+  {
+    "id": 274,
+    "noun": "Salat",
+    "article": "der",
+    "english": "salad;lettuce"
+  },
+  {
+    "id": 275,
+    "noun": "Wurst",
+    "article": "die",
+    "english": "sausage"
+  },
+  {
+    "id": 276,
+    "noun": "Cola",
+    "article": "die",
+    "english": "cola"
+  },
+  {
+    "id": 277,
+    "noun": "Getränk",
+    "article": "das",
+    "english": "drink;beverage"
+  },
+  {
+    "id": 278,
+    "noun": "Teller",
+    "article": "der",
+    "english": "plate"
+  },
+  {
+    "id": 279,
+    "noun": "Stift",
+    "article": "der",
+    "english": "pen;pencil"
+  },
+  {
+    "id": 280,
+    "noun": "Telefonnummer",
+    "article": "die",
+    "english": "phone number"
+  },
+  {
+    "id": 281,
+    "noun": "Geschwister",
+    "article": "die",
+    "english": "siblings"
+  },
+  {
+    "id": 282,
+    "noun": "Großvater",
+    "article": "der",
+    "english": "grandfather"
+  },
+  {
+    "id": 283,
+    "noun": "Schülerin",
+    "article": "die",
+    "english": "female student"
+  },
+  {
+    "id": 284,
+    "noun": "Socke",
+    "article": "die",
+    "english": "sock"
+  },
+  {
+    "id": 285,
+    "noun": "Tasse",
+    "article": "die",
+    "english": "cup"
+  },
+  {
+    "id": 286,
+    "noun": "Garage",
+    "article": "die",
+    "english": "garage"
+  },
+  {
+    "id": 287,
+    "noun": "Anfänger",
+    "article": "der",
+    "english": "beginner"
+  },
+  {
+    "id": 288,
+    "noun": "Apfel",
+    "article": "der",
+    "english": "apple"
+  },
+  {
+    "id": 289,
+    "noun": "Hemd",
+    "article": "das",
+    "english": "shirt"
+  },
+  {
+    "id": 290,
+    "noun": "Vormittag",
+    "article": "der",
+    "english": "morning (before noon)"
+  },
+  {
+    "id": 291,
+    "noun": "Saft",
+    "article": "der",
+    "english": "juice"
+  },
+  {
+    "id": 292,
+    "noun": "Brötchen",
+    "article": "das",
+    "english": "roll (bread roll)"
+  },
+  {
+    "id": 293,
+    "noun": "Grammatik",
+    "article": "die",
+    "english": "grammar"
+  },
+  {
+    "id": 294,
+    "noun": "Haltestelle",
+    "article": "die",
+    "english": "bus stop"
+  },
+  {
+    "id": 295,
+    "noun": "Lampe",
+    "article": "die",
+    "english": "lamp"
+  },
+  {
+    "id": 296,
+    "noun": "Suppe",
+    "article": "die",
+    "english": "soup"
+  },
+  {
+    "id": 297,
+    "noun": "Großmutter",
+    "article": "die",
+    "english": "grandmother"
+  },
+  {
+    "id": 298,
+    "noun": "Ampel",
+    "article": "die",
+    "english": "traffic light"
+  },
+  {
+    "id": 299,
+    "noun": "Hausaufgabe",
+    "article": "die",
+    "english": "homework"
+  },
+  {
+    "id": 300,
+    "noun": "Läden",
+    "article": "der",
+    "english": "shops;stores"
+  },
+  {
+    "id": 301,
+    "noun": "Uhrzeit",
+    "article": "die",
+    "english": "time (of day)"
+  },
+  {
+    "id": 302,
+    "noun": "Mutti",
+    "article": "die",
+    "english": "mommy;mum"
+  },
+  {
+    "id": 303,
+    "noun": "Kissen",
+    "article": "das",
+    "english": "pillow"
+  },
+  {
+    "id": 304,
+    "noun": "Tomate",
+    "article": "die",
+    "english": "tomato"
+  },
+  {
+    "id": 305,
+    "noun": "Nudel",
+    "article": "die",
+    "english": "noodle"
+  },
+  {
+    "id": 306,
+    "noun": "Becher",
+    "article": "der",
+    "english": "cup;mug"
+  },
+  {
+    "id": 307,
+    "noun": "Großeltern",
+    "article": "die",
+    "english": "grandparents"
+  },
+  {
+    "id": 308,
+    "noun": "Bäcker",
+    "article": "der",
+    "english": "baker"
+  },
+  {
+    "id": 309,
+    "noun": "Badezimmer",
+    "article": "das",
+    "english": "bathroom"
+  },
+  {
+    "id": 310,
+    "noun": "Kilogramm",
+    "article": "das",
+    "english": "kilogram"
+  },
+  {
+    "id": 311,
+    "noun": "Wörterbuch",
+    "article": "das",
+    "english": "dictionary"
+  },
+  {
+    "id": 312,
+    "noun": "Regal",
+    "article": "das",
+    "english": "shelf;bookcase"
+  },
+  {
+    "id": 313,
+    "noun": "Stopp",
+    "article": "der",
+    "english": "stop"
+  },
+  {
+    "id": 314,
+    "noun": "Mütze",
+    "article": "die",
+    "english": "cap"
+  },
+  {
+    "id": 315,
+    "noun": "Vorname",
+    "article": "der",
+    "english": "first name;given name"
+  },
+  {
+    "id": 316,
+    "noun": "Huhn",
+    "article": "das",
+    "english": "chicken;hen"
+  },
+  {
+    "id": 317,
+    "noun": "Löffel",
+    "article": "der",
+    "english": "spoon"
+  },
+  {
+    "id": 318,
+    "noun": "Studentin",
+    "article": "die",
+    "english": "female student"
+  },
+  {
+    "id": 319,
+    "noun": "Abc",
+    "article": "das",
+    "english": "alphabet"
+  },
+  {
+    "id": 320,
+    "noun": "Bäckerei",
+    "article": "die",
+    "english": "bakery"
+  },
+  {
+    "id": 321,
+    "noun": "Mom",
+    "article": "die",
+    "english": "Mom"
+  },
+  {
+    "id": 322,
+    "noun": "Puppe",
+    "article": "die",
+    "english": "doll"
+  },
+  {
+    "id": 323,
+    "noun": "Durst",
+    "article": "der",
+    "english": "thirst"
+  },
+  {
+    "id": 324,
+    "noun": "Handtuch",
+    "article": "das",
+    "english": "towel"
+  },
+  {
+    "id": 325,
+    "noun": "Formular",
+    "article": "das",
+    "english": "form (document)"
+  },
+  {
+    "id": 326,
+    "noun": "Banane",
+    "article": "die",
+    "english": "banana"
+  },
+  {
+    "id": 327,
+    "noun": "Pullover",
+    "article": "der",
+    "english": "sweater;pullover"
+  },
+  {
+    "id": 328,
+    "noun": "Würstchen",
+    "article": "das",
+    "english": "sausage (small)"
+  },
+  {
+    "id": 329,
+    "noun": "Joghurt",
+    "article": "der",
+    "english": "yogurt"
+  },
+  {
+    "id": 330,
+    "noun": "Hotelzimmer",
+    "article": "das",
+    "english": "hotel room"
+  },
+  {
+    "id": 331,
+    "noun": "Gabel",
+    "article": "die",
+    "english": "fork"
+  },
+  {
+    "id": 332,
+    "noun": "Lektion",
+    "article": "die",
+    "english": "lesson"
+  },
+  {
+    "id": 333,
+    "noun": "Haustier",
+    "article": "das",
+    "english": "pet"
+  },
+  {
+    "id": 334,
+    "noun": "Photo",
+    "article": "das",
+    "english": "photo"
+  },
+  {
+    "id": 335,
+    "noun": "Samstagabend",
+    "article": "der",
+    "english": "Saturday evening"
+  },
+  {
+    "id": 336,
+    "noun": "Erdbeere",
+    "article": "die",
+    "english": "strawberry"
+  },
+  {
+    "id": 337,
+    "noun": "Mami",
+    "article": "die",
+    "english": "mommy"
+  },
+  {
+    "id": 338,
+    "noun": "Birne",
+    "article": "die",
+    "english": "pear;light bulb"
+  },
+  {
+    "id": 339,
+    "noun": "Bushaltestelle",
+    "article": "die",
+    "english": "bus stop"
+  },
+  {
+    "id": 340,
+    "noun": "Wortschatz",
+    "article": "der",
+    "english": "vocabulary"
+  },
+  {
+    "id": 341,
+    "noun": "Sonnabend",
+    "article": "der",
+    "english": "Saturday"
+  },
+  {
+    "id": 342,
+    "noun": "Toast",
+    "article": "der",
+    "english": "toast"
+  },
+  {
+    "id": 343,
+    "noun": "Alphabet",
+    "article": "das",
+    "english": "alphabet"
+  },
+  {
+    "id": 344,
+    "noun": "Zitrone",
+    "article": "die",
+    "english": "lemon"
+  },
+  {
+    "id": 345,
+    "noun": "Klassenzimmer",
+    "article": "das",
+    "english": "classroom"
+  },
+  {
+    "id": 346,
+    "noun": "Bluse",
+    "article": "die",
+    "english": "blouse"
+  },
+  {
+    "id": 347,
+    "noun": "Bratwurst",
+    "article": "die",
+    "english": "fried sausage;bratwurst"
+  },
+  {
+    "id": 348,
+    "noun": "Bleistift",
+    "article": "der",
+    "english": "pencil"
+  },
+  {
+    "id": 349,
+    "noun": "Pasta",
+    "article": "die",
+    "english": "pasta"
+  },
+  {
+    "id": 350,
+    "noun": "Sandwich",
+    "article": "das",
+    "english": "sandwich"
+  },
+  {
+    "id": 351,
+    "noun": "Ketchup",
+    "article": "das",
+    "english": "ketchup"
+  },
+  {
+    "id": 352,
+    "noun": "Verkäuferin",
+    "article": "die",
+    "english": "saleswoman"
+  },
+  {
+    "id": 353,
+    "noun": "Postkarte",
+    "article": "die",
+    "english": "postcard"
+  },
+  {
+    "id": 354,
+    "noun": "Zahnbürste",
+    "article": "die",
+    "english": "toothbrush"
+  },
+  {
+    "id": 355,
+    "noun": "Hähnchen",
+    "article": "das",
+    "english": "chicken (food)"
+  },
+  {
+    "id": 356,
+    "noun": "Amerikanerin",
+    "article": "die",
+    "english": "American woman"
+  },
+  {
+    "id": 357,
+    "noun": "Kugelschreiber",
+    "article": "der",
+    "english": "ballpoint pen"
+  },
+  {
+    "id": 358,
+    "noun": "Nachtisch",
+    "article": "der",
+    "english": "dessert"
+  },
+  {
+    "id": 359,
+    "noun": "Vokabel",
+    "article": "die",
+    "english": "vocabulary word"
+  },
+  {
+    "id": 360,
+    "noun": "Feb",
+    "article": "der",
+    "english": "Feb (February)"
+  },
+  {
+    "id": 361,
+    "noun": "Zahnpasta",
+    "article": "die",
+    "english": "toothpaste"
+  },
+  {
+    "id": 362,
+    "noun": "Möhre",
+    "article": "die",
+    "english": "carrot"
+  },
+  {
+    "id": 363,
+    "noun": "Dienstagabend",
+    "article": "der",
+    "english": "Tuesday evening"
+  },
+  {
+    "id": 364,
+    "noun": "Papi",
+    "article": "der",
+    "english": "daddy"
+  },
+  {
+    "id": 365,
+    "noun": "Regenschirm",
+    "article": "der",
+    "english": "umbrella"
+  },
+  {
+    "id": 366,
+    "noun": "Abendbrot",
+    "article": "das",
+    "english": "supper;dinner (evening meal;often cold)"
+  },
+  {
+    "id": 367,
+    "noun": "Cappuccino",
+    "article": "der",
+    "english": "cappuccino"
+  },
+  {
+    "id": 368,
+    "noun": "Pipi",
+    "article": "das",
+    "english": "pee-pee;urine (childish)"
+  },
+  {
+    "id": 369,
+    "noun": "Orangensaft",
+    "article": "der",
+    "english": "orange juice"
+  },
+  {
+    "id": 370,
+    "noun": "Kellnerin",
+    "article": "die",
+    "english": "waitress"
+  },
+  {
+    "id": 371,
+    "noun": "Bürste",
+    "article": "die",
+    "english": "brush"
+  },
+  {
+    "id": 372,
+    "noun": "Apfelsaft",
+    "article": "der",
+    "english": "apple juice"
+  },
+  {
+    "id": 373,
+    "noun": "Sprachkurs",
+    "article": "der",
+    "english": "language course"
+  },
+  {
+    "id": 374,
+    "noun": "Sportunterricht",
+    "article": "der",
+    "english": "physical education"
+  },
+  {
+    "id": 375,
+    "noun": "Wochentag",
+    "article": "der",
+    "english": "weekday"
+  },
+  {
+    "id": 376,
+    "noun": "Limonade",
+    "article": "die",
+    "english": "lemonade;soda"
+  },
+  {
+    "id": 377,
+    "noun": "Schneemann",
+    "article": "der",
+    "english": "snowman"
+  },
+  {
+    "id": 378,
+    "noun": "Schulbus",
+    "article": "der",
+    "english": "school bus"
+  },
+  {
+    "id": 379,
+    "noun": "Cornflakes",
+    "article": "die",
+    "english": "cornflakes"
+  },
+  {
+    "id": 380,
+    "noun": "Apfelkuchen",
+    "article": "der",
+    "english": "apple pie"
+  },
+  {
+    "id": 381,
+    "noun": "Italienerin",
+    "article": "die",
+    "english": "Italian woman"
+  },
+  {
+    "id": 382,
+    "noun": "Autoschlüssel",
+    "article": "der",
+    "english": "car key"
+  },
+  {
+    "id": 383,
+    "noun": "Lieblingsfarbe",
+    "article": "die",
+    "english": "favorite color"
+  },
+  {
+    "id": 384,
+    "noun": "Vati",
+    "article": "der",
+    "english": "daddy;dad"
+  },
+  {
+    "id": 385,
+    "noun": "Spaß",
+    "article": "der",
+    "english": "fun"
+  },
+  {
+    "id": 386,
+    "noun": "Freitagnachmittag",
+    "article": "der",
+    "english": "Friday afternoon"
+  }
+]
