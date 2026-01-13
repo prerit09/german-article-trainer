@@ -238,7 +238,7 @@ export default function App() {
             {!showEnglish ? (
               <button style={styles.showEnglishButton} onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
-              <p>{word.english}</p>
+              <p style = {styles.h6}>{word.english}</p>
             )}
             <button style={styles.nextButton} onClick={nextWord}>Next</button>
           </>
