@@ -19,7 +19,6 @@ export default function App() {
 
   const CHUNK_SIZE = 25;
 
-  // Load JSON words
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/a1-nouns.json")
       .then(res => res.json())
@@ -27,11 +26,10 @@ export default function App() {
       .catch(err => console.error("Failed to load words", err));
   }, []);
 
-  if (words.length === 0) return <p style={{ textAlign: "center" }}>Loading words…</p>;
+  if (!words.length) return <p style={{ textAlign: "center" }}>Loading words…</p>;
 
   const totalChunks = Math.ceil(words.length / CHUNK_SIZE);
 
-  // ------------------ Quiz & Review functions ------------------
   function startQuiz(chunkIndex = 0) {
     const start = chunkIndex * CHUNK_SIZE;
     const end = start + CHUNK_SIZE;
@@ -49,7 +47,7 @@ export default function App() {
     setPage("review");
     setMode("review");
     setIndex(0);
-    setAttemptedWords([]); // clear previous attempts
+    setAttemptedWords([]);
     setSelected(null);
     setShowEnglish(false);
   }
@@ -75,10 +73,9 @@ export default function App() {
     if (selected) return;
     setSelected(article);
 
-    // For nouns, store selected article
     setAttemptedWords(prev => [
       ...prev,
-      { ...currentWord(), selected: currentWord().article ? article : null, addToList: false }
+      { ...currentWord(), selected: article, addToList: false }
     ]);
   }
 
@@ -96,17 +93,13 @@ export default function App() {
 
   function selectAllIncorrect() {
     setAttemptedWords(prev =>
-      prev.map(w =>
-        w.selected !== w.article ? { ...w, addToList: true } : w
-      )
+      prev.map(w => (w.selected !== w.article ? { ...w, addToList: true } : w))
     );
   }
 
   function selectAllCorrect() {
     setAttemptedWords(prev =>
-      prev.map(w =>
-        w.selected === w.article ? { ...w, addToList: true } : w
-      )
+      prev.map(w => (w.selected === w.article ? { ...w, addToList: true } : w))
     );
   }
 
@@ -117,7 +110,7 @@ export default function App() {
   function saveReviewList() {
     if (!newListName) return;
     const selectedWords = attemptedWords.filter(w => w.addToList);
-    if (selectedWords.length === 0) return;
+    if (!selectedWords.length) return;
 
     const updated = [...reviewLists, { name: newListName, words: selectedWords }];
     setReviewLists(updated);
@@ -131,11 +124,15 @@ export default function App() {
     return (
       <div style={styles.outer}>
         <div style={styles.container}>
-          <h1>German A1 Trainer</h1>
-          <h3>Start Quiz (Chunks of 25 words)</h3>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 20 }}>
+          <h1 style={styles.h1}>German A1 Trainer</h1>
+          <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
+          <div style={styles.flexWrap}>
             {Array.from({ length: totalChunks }).map((_, i) => (
-              <button key={i} onClick={() => startQuiz(i)}>
+              <button
+                key={i}
+                style={styles.button}
+                onClick={() => startQuiz(i)}
+              >
                 Words {i * CHUNK_SIZE + 1} - {Math.min((i + 1) * CHUNK_SIZE, words.length)}
               </button>
             ))}
@@ -143,12 +140,12 @@ export default function App() {
 
           {reviewLists.length > 0 && (
             <div style={{ marginTop: 30 }}>
-              <h3>My Review Lists</h3>
+              <h3 style={styles.h3}>My Review Lists</h3>
               {reviewLists.map((list, i) => (
                 <div key={i} style={{ marginBottom: 10 }}>
                   <span>{list.name} ({list.words.length}) </span>
-                  <button onClick={() => startReview(list)}>Review</button>
-                  <button onClick={() => deleteReviewList(i)} style={{ color: "red" }}>Delete</button>
+                  <button style={styles.button} onClick={() => startReview(list)}>Review</button>
+                  <button style={{ ...styles.button, background: "#f44336" }} onClick={() => deleteReviewList(i)}>Delete</button>
                 </div>
               ))}
             </div>
@@ -161,21 +158,20 @@ export default function App() {
   const word = currentWord();
 
   // ------------------ FINISHED ------------------
-  if ((mode === "quiz" && index >= quizWords.length) ||
-      (mode === "review" && index >= currentReviewWords.length)) {
+  if ((mode === "quiz" && index >= quizWords.length) || (mode === "review" && index >= currentReviewWords.length)) {
     return (
       <div style={styles.outer}>
         <div style={styles.container}>
-          <h2>Finished</h2>
+          <h2 style={styles.h2}>Finished</h2>
 
-          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
-            <button onClick={selectAllIncorrect}>Select Incorrect</button>
-            <button onClick={selectAllCorrect}>Select Correct</button>
-            <button onClick={clearSelection}>Clear</button>
+          <div style={styles.flexWrap}>
+            <button style={styles.button} onClick={selectAllIncorrect}>Select Incorrect</button>
+            <button style={styles.button} onClick={selectAllCorrect}>Select Correct</button>
+            <button style={styles.button} onClick={clearSelection}>Clear</button>
           </div>
 
           {attemptedWords.map(w => (
-            <div key={w.id}>
+            <div key={w.id} style={styles.checkboxLabel}>
               <input
                 type="checkbox"
                 checked={w.addToList}
@@ -185,21 +181,20 @@ export default function App() {
           ))}
 
           {!showSaveList ? (
-            <button onClick={() => setShowSaveList(true)} style={{ marginTop: 12 }}>
-              Save to Review List
-            </button>
+            <button style={styles.button} onClick={() => setShowSaveList(true)}>Save to Review List</button>
           ) : (
             <div style={{ marginTop: 12 }}>
               <input
                 value={newListName}
                 onChange={e => setNewListName(e.target.value)}
                 placeholder="List name"
+                style={{ padding: 8, fontSize: 16, borderRadius: 6, marginRight: 6 }}
               />
-              <button onClick={saveReviewList}>Save</button>
+              <button style={styles.button} onClick={saveReviewList}>Save</button>
             </div>
           )}
 
-          <button onClick={backToHome} style={{ marginTop: 20 }}>Home</button>
+          <button style={{ ...styles.button, marginTop: 20 }} onClick={backToHome}>Home</button>
         </div>
       </div>
     );
@@ -209,19 +204,27 @@ export default function App() {
   return (
     <div style={styles.outer}>
       <div style={styles.container}>
-        <h2>{mode === "quiz" ? "Quiz" : "Review"}</h2>
-        <h1>{word.noun}</h1>
+        <h2 style={styles.h2}>{mode === "quiz" ? "Quiz" : "Review"}</h2>
+        <h1 style={styles.h1}>{word.noun}</h1>
 
-        <div style={{ display: "flex", gap: 10 }}>
+        <div style={styles.flexWrap}>
           {["der", "die", "das"].map(a => (
             <button
               key={a}
               onClick={() => chooseArticle(a)}
               style={{
+                padding: "10px 16px",
+                borderRadius: 8,
+                border: "none",
+                cursor: "pointer",
+                fontSize: 16,
                 background:
                   selected === a
-                    ? a === word.article ? "#4caf50" : "#f44336"
-                    : "#eee"
+                    ? a === word.article
+                      ? "#4caf50"
+                      : "#f44336"
+                    : "#eee",
+                color: selected === a ? "#fff" : "#333",
               }}
             >
               {a}
@@ -233,11 +236,11 @@ export default function App() {
           <>
             <p>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
-              <button onClick={() => setShowEnglish(true)}>Show English</button>
+              <button style={styles.nextButton} onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
               <p>{word.english}</p>
             )}
-            <button onClick={nextWord}>Next</button>
+            <button style={styles.nextButton} onClick={nextWord}>Next</button>
           </>
         )}
       </div>
@@ -250,12 +253,57 @@ const styles = {
     minHeight: "100vh",
     display: "flex",
     justifyContent: "center",
-    padding: 20,
-    background: "#8ea4bdff"
+    alignItems: "center",
+    padding: "20px",
+    background: "linear-gradient(to bottom, #8ea4bd, #dbe6f0)",
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
   },
   container: {
     width: "100%",
     maxWidth: 600,
-    textAlign: "center"
-  }
+    textAlign: "center",
+    background: "#ffffffcc",
+    borderRadius: 12,
+    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
+    padding: "20px 15px",
+    boxSizing: "border-box",
+  },
+  h1: { fontSize: "2rem", marginBottom: 16, color: "#333" },
+  h2: { fontSize: "1.5rem", marginBottom: 12, color: "#444" },
+  h3: { fontSize: "1.2rem", marginBottom: 10, color: "#555" },
+  button: {
+    background: "#4caf50",
+    color: "#fff",
+    border: "none",
+    borderRadius: 8,
+    padding: "10px 18px",
+    cursor: "pointer",
+    fontSize: 16,
+    transition: "all 0.2s ease",
+  },
+  nextButton: {
+    marginTop: 12,
+    padding: "8px 16px",
+    fontSize: 16,
+    borderRadius: 6,
+    cursor: "pointer",
+    border: "none",
+    background: "#1976d2",
+    color: "#fff",
+  },
+  flexWrap: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: 10,
+    justifyContent: "center",
+    marginBottom: 20,
+  },
+  checkboxLabel: {
+    display: "flex",
+    alignItems: "center",
+    gap: 8,
+    marginBottom: 8,
+    fontSize: 16,
+    color: "#333",
+  },
 };
