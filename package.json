@@ -1,11 +1,9 @@
 {
-  "homepage": "https://prerit09.github.io/german-a1-trainer",
   "name": "german-article-trainer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
     "dev": "vite",
     "build": "npm exec vite build",
     "lint": "eslint .",
