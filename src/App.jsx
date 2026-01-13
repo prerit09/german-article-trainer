@@ -251,7 +251,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     padding: 20,
-    background: "#f9f9f9"
+    background: "#8ea4bdff"
   },
   container: {
     width: "100%",
