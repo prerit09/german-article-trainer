@@ -236,7 +236,7 @@ export default function App() {
           <>
             <p>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
-              <button style={styles.nextButton} onClick={() => setShowEnglish(true)}>Show English</button>
+              <button style={styles.showEnglishButton} onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
               <p>{word.english}</p>
             )}
@@ -283,13 +283,25 @@ const styles = {
   },
   nextButton: {
     marginTop: 12,
-    padding: "8px 16px",
+    padding: "10px 18px",
     fontSize: 16,
-    borderRadius: 6,
+    borderRadius: 8,
     cursor: "pointer",
     border: "none",
     background: "#1976d2",
     color: "#fff",
+    transition: "background 0.2s ease",
+  },
+  showEnglishButton: {
+    marginTop: 12,
+    padding: "10px 18px",
+    fontSize: 16,
+    borderRadius: 8,
+    cursor: "pointer",
+    border: "none",
+    background: "#4caf50", // bright green, better for visibility
+    color: "#fff",
+    transition: "background 0.2s ease",
   },
   flexWrap: {
     display: "flex",
