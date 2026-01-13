@@ -143,7 +143,7 @@ export default function App() {
               <h3 style={styles.h3}>My Review Lists</h3>
               {reviewLists.map((list, i) => (
                 <div key={i} style={{ marginBottom: 10 }}>
-                  <span>{list.name} ({list.words.length}) </span>
+                  <span style={styles.h6}>{list.name} ({list.words.length}) </span>
                   <button style={styles.button} onClick={() => startReview(list)}>Review</button>
                   <button style={{ ...styles.button, background: "#f44336" }} onClick={() => deleteReviewList(i)}>Delete</button>
                 </div>
