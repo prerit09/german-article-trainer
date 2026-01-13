@@ -234,7 +234,7 @@ export default function App() {
 
         {selected && (
           <>
-            <p>Correct: <strong>{word.article}</strong></p>
+            <p style = {styles.h6}>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
               <button style={styles.showEnglishButton} onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
@@ -271,6 +271,8 @@ const styles = {
   h1: { fontSize: "2rem", marginBottom: 16, color: "#333" },
   h2: { fontSize: "1.5rem", marginBottom: 12, color: "#444" },
   h3: { fontSize: "1.2rem", marginBottom: 10, color: "#555" },
+  h6: { fontSize: "1.2rem", marginBottom: 10, color: "#555" },
+
   button: {
     background: "#4caf50",
     color: "#fff",
