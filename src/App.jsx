@@ -1,34 +1,32 @@
 import { useState, useEffect } from "react";
 
 export default function App() {
-  const [words, setWords] = useState([]); // load from JSON
-  const [page, setPage] = useState("home"); // "home" | "quiz" | "review"
-  const [mode, setMode] = useState("quiz"); // used for quiz/review distinction
+  const [words, setWords] = useState([]);
+  const [page, setPage] = useState("home"); // home | quiz | review
+  const [mode, setMode] = useState("quiz");
   const [index, setIndex] = useState(0);
   const [selected, setSelected] = useState(null);
   const [showEnglish, setShowEnglish] = useState(false);
   const [attemptedWords, setAttemptedWords] = useState([]);
   const [reviewLists, setReviewLists] = useState(() => {
-    const savedLists = localStorage.getItem("reviewLists");
-    return savedLists ? JSON.parse(savedLists) : [];
+    const saved = localStorage.getItem("reviewLists");
+    return saved ? JSON.parse(saved) : [];
   });
   const [newListName, setNewListName] = useState("");
   const [showSaveList, setShowSaveList] = useState(false);
   const [currentReviewWords, setCurrentReviewWords] = useState([]);
 
-  // --- Load JSON A1 words ---
+  // Load JSON words
   useEffect(() => {
     fetch(import.meta.env.BASE_URL + "data/german-a1-nouns.json")
-      .then(res => {
-        if (!res.ok) throw new Error("Failed to load JSON");
-        return res.json();
-      })
-      .then(data => setWords(data))
-      .catch(err => {
-        console.error(err);
-        alert("Failed to load word list");
-      });
+      .then(res => res.json())
+      .then(setWords)
+      .catch(err => console.error("Failed to load words", err));
   }, []);
+
+  if (words.length === 0) {
+    return <p style={{ textAlign: "center" }}>Loading words…</p>;
+  }
 
   function startQuiz() {
     setPage("quiz");
@@ -52,15 +50,14 @@ export default function App() {
   function backToHome() {
     setPage("home");
     setIndex(0);
-    setAttemptedWords([]);
     setSelected(null);
     setShowEnglish(false);
   }
 
-  function deleteReviewList(indexToDelete) {
-    const updatedLists = reviewLists.filter((_, i) => i !== indexToDelete);
-    setReviewLists(updatedLists);
-    localStorage.setItem("reviewLists", JSON.stringify(updatedLists));
+  function deleteReviewList(i) {
+    const updated = reviewLists.filter((_, idx) => idx !== i);
+    setReviewLists(updated);
+    localStorage.setItem("reviewLists", JSON.stringify(updated));
   }
 
   function currentWord() {
@@ -70,55 +67,74 @@ export default function App() {
   function chooseArticle(article) {
     if (selected) return;
     setSelected(article);
-    setAttemptedWords(prev => [...prev, { ...currentWord(), selected: article, addToList: false }]);
+    setAttemptedWords(prev => [
+      ...prev,
+      { ...currentWord(), selected: article, addToList: false }
+    ]);
   }
 
   function nextWord() {
     setSelected(null);
     setShowEnglish(false);
-    setIndex(prev => prev + 1);
+    setIndex(i => i + 1);
   }
 
-  function toggleWordForList(wordId) {
-    setAttemptedWords(prev => prev.map(w => w.id === wordId ? { ...w, addToList: !w.addToList } : w));
+  function toggleWordForList(id) {
+    setAttemptedWords(prev =>
+      prev.map(w => (w.id === id ? { ...w, addToList: !w.addToList } : w))
+    );
+  }
+
+  function selectAllIncorrect() {
+    setAttemptedWords(prev =>
+      prev.map(w =>
+        w.selected !== w.article ? { ...w, addToList: true } : w
+      )
+    );
+  }
+
+  function selectAllCorrect() {
+    setAttemptedWords(prev =>
+      prev.map(w =>
+        w.selected === w.article ? { ...w, addToList: true } : w
+      )
+    );
+  }
+
+  function clearSelection() {
+    setAttemptedWords(prev => prev.map(w => ({ ...w, addToList: false })));
   }
 
   function saveReviewList() {
     if (!newListName) return;
-    const wordsToSave = attemptedWords.filter(w => w.addToList);
-    if (wordsToSave.length === 0) return;
+    const selectedWords = attemptedWords.filter(w => w.addToList);
+    if (selectedWords.length === 0) return;
 
-    const updatedLists = [...reviewLists, { name: newListName, words: wordsToSave }];
-    setReviewLists(updatedLists);
-    localStorage.setItem("reviewLists", JSON.stringify(updatedLists));
+    const updated = [...reviewLists, { name: newListName, words: selectedWords }];
+    setReviewLists(updated);
+    localStorage.setItem("reviewLists", JSON.stringify(updated));
     setShowSaveList(false);
     setNewListName("");
   }
 
-  if (words.length === 0) {
-    return <p style={{ textAlign: 'center', marginTop: 50 }}>Loading words...</p>;
-  }
-
-  // --- Home Page ---
+  // HOME
   if (page === "home") {
     return (
-      <div style={styles.outerContainer}>
+      <div style={styles.outer}>
         <div style={styles.container}>
           <h1>German A1 Trainer</h1>
-          <button onClick={startQuiz} style={{ ...styles.button, marginBottom: 20 }}>Start A1 Quiz</button>
+          <button onClick={startQuiz}>Start Quiz</button>
 
           {reviewLists.length > 0 && (
-            <div style={{ marginTop: 30, width: '100%' }}>
+            <div style={{ marginTop: 30 }}>
               <h3>My Review Lists</h3>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                {reviewLists.map((list, i) => (
-                  <li key={i} style={{ marginBottom: 8, display: 'flex', justifyContent: 'center', gap: 8, alignItems: 'center' }}>
-                    <span>{list.name} ({list.words.length} words)</span>
-                    <button onClick={() => startReview(list)}>Start Review</button>
-                    <button onClick={() => deleteReviewList(i)} style={{ color: 'red' }}>Delete</button>
-                  </li>
-                ))}
-              </ul>
+              {reviewLists.map((list, i) => (
+                <div key={i} style={{ marginBottom: 10 }}>
+                  <span>{list.name} ({list.words.length}) </span>
+                  <button onClick={() => startReview(list)}>Review</button>
+                  <button onClick={() => deleteReviewList(i)} style={{ color: "red" }}>Delete</button>
+                </div>
+              ))}
             </div>
           )}
         </div>
@@ -126,60 +142,86 @@ export default function App() {
     );
   }
 
-  // --- Quiz or Review Mode Finished ---
   const word = currentWord();
-  if ((mode === "quiz" && index >= words.length) || (mode === "review" && index >= currentReviewWords.length)) {
+
+  // FINISHED
+  if ((mode === "quiz" && index >= words.length) ||
+      (mode === "review" && index >= currentReviewWords.length)) {
     return (
-      <div style={styles.outerContainer}>
+      <div style={styles.outer}>
         <div style={styles.container}>
-          <h2>{mode === "quiz" ? "Quiz Finished" : "Review Finished"}</h2>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            {attemptedWords.map(w => (
-              <li key={w.id} style={{ marginBottom: 8, textAlign: 'center' }}>
-                <input type="checkbox" checked={w.addToList || false} onChange={() => toggleWordForList(w.id)} style={{ marginRight: 8 }} />
-                {w.noun} ({w.selected}) {w.selected === w.article ? '✓' : '✗'}
-              </li>
-            ))}
-          </ul>
+          <h2>Finished</h2>
+
+          <div style={{ display: "flex", gap: 8, marginBottom: 12 }}>
+            <button onClick={selectAllIncorrect}>Select Incorrect</button>
+            <button onClick={selectAllCorrect}>Select Correct</button>
+            <button onClick={clearSelection}>Clear</button>
+          </div>
+
+          {attemptedWords.map(w => (
+            <div key={w.id}>
+              <input
+                type="checkbox"
+                checked={w.addToList}
+                onChange={() => toggleWordForList(w.id)}
+              /> {w.noun} ({w.selected === w.article ? "✓" : "✗"})
+            </div>
+          ))}
 
           {!showSaveList ? (
-            <button onClick={() => setShowSaveList(true)}>Save Selected Words to Review List</button>
+            <button onClick={() => setShowSaveList(true)} style={{ marginTop: 12 }}>
+              Save to Review List
+            </button>
           ) : (
-            <div>
-              <input type="text" placeholder="Enter review list name" value={newListName} onChange={e => setNewListName(e.target.value)} style={{ padding: 6, marginRight: 8 }} />
+            <div style={{ marginTop: 12 }}>
+              <input
+                value={newListName}
+                onChange={e => setNewListName(e.target.value)}
+                placeholder="List name"
+              />
               <button onClick={saveReviewList}>Save</button>
             </div>
           )}
 
-          <div style={{ marginTop: 20 }}>
-            <button onClick={backToHome}>Back to Home</button>
-          </div>
+          <button onClick={backToHome} style={{ marginTop: 20 }}>Home</button>
         </div>
       </div>
     );
   }
 
-  // --- Quiz / Review Mode ---
+  // QUIZ / REVIEW
   return (
-    <div style={styles.outerContainer}>
+    <div style={styles.outer}>
       <div style={styles.container}>
-        <h2>{mode === "quiz" ? "A1 Quiz" : "Review Mode"}</h2>
+        <h2>{mode === "quiz" ? "Quiz" : "Review"}</h2>
         <h1>{word.noun}</h1>
-        <div style={styles.buttons}>
-          {['der','die','das'].map(a => (
-            <button key={a} onClick={() => chooseArticle(a)} style={{ ...styles.button, background: selected === a ? (a === word.article ? '#4caf50' : '#f44336') : '#eee' }}>{a}</button>
+
+        <div style={{ display: "flex", gap: 10 }}>
+          {["der", "die", "das"].map(a => (
+            <button
+              key={a}
+              onClick={() => chooseArticle(a)}
+              style={{
+                background:
+                  selected === a
+                    ? a === word.article ? "#4caf50" : "#f44336"
+                    : "#eee"
+              }}
+            >
+              {a}
+            </button>
           ))}
         </div>
 
         {selected && (
           <>
-            <p>Correct article: <strong>{word.article}</strong></p>
+            <p>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
               <button onClick={() => setShowEnglish(true)}>Show English + Plural</button>
             ) : (
-              <p>English: {word.english} | Plural: {word.plural}</p>
+              <p>{word.english} · Plural: {word.plural}</p>
             )}
-            <button onClick={nextWord} style={{ marginTop: 16 }}>Next</button>
+            <button onClick={nextWord}>Next</button>
           </>
         )}
       </div>
@@ -188,12 +230,16 @@ export default function App() {
 }
 
 const styles = {
-  outerContainer: {
-    display: 'flex', justifyContent: 'center', width: '100%', minHeight: '100vh', boxSizing: 'border-box', padding: '0 16px', backgroundColor: '#f9f9f9'
+  outer: {
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    padding: 20,
+    background: "#f9f9f9"
   },
   container: {
-    fontFamily: 'sans-serif', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-start', marginTop: 40, width: '100%', maxWidth: '100%', boxSizing: 'border-box'
-  },
-  buttons: { display: 'flex', justifyContent: 'center', gap: 12 },
-  button: { padding: '10px 16px', fontSize: 16, cursor: 'pointer' }
+    width: "100%",
+    maxWidth: 600,
+    textAlign: "center"
+  }
 };
