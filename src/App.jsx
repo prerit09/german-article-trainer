@@ -8,6 +8,7 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [showEnglish, setShowEnglish] = useState(false);
   const [attemptedWords, setAttemptedWords] = useState([]);
+  const [selectedReviewList, setSelectedReviewList] = useState(null);
   const [reviewLists, setReviewLists] = useState(() => {
     const saved = localStorage.getItem("reviewLists");
     return saved ? JSON.parse(saved) : [];
@@ -118,15 +119,26 @@ export default function App() {
   }
 
   function saveReviewList() {
-    if (!newListName) return;
     const selectedWords = attemptedWords.filter(w => w.addToList);
     if (!selectedWords.length) return;
 
-    const updated = [...reviewLists, { name: newListName, words: selectedWords }];
-    setReviewLists(updated);
-    localStorage.setItem("reviewLists", JSON.stringify(updated));
+    if (selectedReviewList !== null) {
+      // Add to existing list
+      const updated = reviewLists.map((list, i) =>
+        i === selectedReviewList ? { ...list, words: [...list.words, ...selectedWords] } : list
+      );
+      setReviewLists(updated);
+      localStorage.setItem("reviewLists", JSON.stringify(updated));
+    } else if (newListName) {
+      // Create new list
+      const updated = [...reviewLists, { name: newListName, words: selectedWords }];
+      setReviewLists(updated);
+      localStorage.setItem("reviewLists", JSON.stringify(updated));
+    }
+
     setShowSaveList(false);
     setNewListName("");
+    setSelectedReviewList(null);
   }
 
   // ------------------ HOME PAGE ------------------
@@ -211,12 +223,24 @@ export default function App() {
             <button style={styles.button} onClick={() => setShowSaveList(true)}>Save to Review List</button>
           ) : (
             <div style={{ marginTop: 12 }}>
-              <input
-                value={newListName}
-                onChange={e => setNewListName(e.target.value)}
-                placeholder="List name"
+              <select
+                value={selectedReviewList ?? ""}
+                onChange={e => setSelectedReviewList(e.target.value !== "" ? Number(e.target.value) : null)}
                 style={{ padding: 8, fontSize: 16, borderRadius: 6, marginRight: 6 }}
-              />
+              >
+                <option value="">Create new list</option>
+                {reviewLists.map((list, i) => (
+                  <option key={i} value={i}>{list.name}</option>
+                ))}
+              </select>
+              {selectedReviewList === null && (
+                <input
+                  value={newListName}
+                  onChange={e => setNewListName(e.target.value)}
+                  placeholder="List name"
+                  style={{ padding: 8, fontSize: 16, borderRadius: 6, marginRight: 6 }}
+                />
+              )}
               <button style={styles.button} onClick={saveReviewList}>Save</button>
             </div>
           )}
