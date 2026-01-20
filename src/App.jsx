@@ -19,13 +19,18 @@ export default function App() {
   const [quizWords, setQuizWords] = useState([]);
   const [level, setLevel] = useState("a1"); // "a1" | "a2" | "b1"
 
+  // const [completedChunks, setCompletedChunks] = useState(() => {
+  //   const saved = localStorage.getItem("completedChunks");
+  //   return saved ? JSON.parse(saved) : {};
+  // });
+
   const CHUNK_SIZE = 25;
 
   function getWordsUrl(level) {
     switch(level) {
-      case "a1": return "http://localhost:5173/german-article-trainer/data/a1-nouns.json";
-      case "a2": return "http://localhost:5173/german-article-trainer/data/a2-nouns.json";
-      case "b1": return "http://localhost:5173/german-article-trainer/data/b1-nouns.json";
+      case "a1": return import.meta.env.BASE_URL + "data/a1-nouns.json";
+      case "a2": return import.meta.env.BASE_URL + "data/a2-nouns.json";
+      case "b1": return import.meta.env.BASE_URL + "data/b1-nouns.json";
       default: throw new Error("Unknown level: " + level);
     }
   }
