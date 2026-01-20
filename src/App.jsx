@@ -16,17 +16,27 @@ export default function App() {
   const [showSaveList, setShowSaveList] = useState(false);
   const [currentReviewWords, setCurrentReviewWords] = useState([]);
   const [quizWords, setQuizWords] = useState([]);
+  const [level, setLevel] = useState("a1"); // "a1" | "a2" | "b1"
 
   const CHUNK_SIZE = 25;
 
+  function getWordsUrl(level) {
+    switch(level) {
+      case "a1": return "http://localhost:5173/german-article-trainer/data/a1-nouns.json";
+      case "a2": return "http://localhost:5173/german-article-trainer/data/a2-nouns.json";
+      case "b1": return "http://localhost:5173/german-article-trainer/data/b1-nouns.json";
+      default: throw new Error("Unknown level: " + level);
+    }
+  }
+
+  // Fetch words whenever the level changes
   useEffect(() => {
-    fetch(import.meta.env.BASE_URL + "data/a1-nouns.json")
+    // setWords([]); // clear old words while fetching new level
+    fetch(getWordsUrl(level))
       .then(res => res.json())
       .then(setWords)
       .catch(err => console.error("Failed to load words", err));
-  }, []);
-
-  if (!words.length) return <p style={{ textAlign: "center" }}>Loading words…</p>;
+  }, [level]);
 
   const totalChunks = Math.ceil(words.length / CHUNK_SIZE);
 
@@ -124,20 +134,37 @@ export default function App() {
     return (
       <div style={styles.outer}>
         <div style={styles.container}>
-          <h1 style={styles.h1}>German A1 Trainer</h1>
+          <h1 style={styles.h1}>German Trainer</h1>
           <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
-          <div style={styles.flexWrap}>
-            {Array.from({ length: totalChunks }).map((_, i) => (
-              <button
-                key={i}
-                style={styles.button}
-                onClick={() => startQuiz(i)}
-              >
-                Words {i * CHUNK_SIZE + 1} - {Math.min((i + 1) * CHUNK_SIZE, words.length)}
-              </button>
-            ))}
+
+          {/* LEVEL SELECTOR */}
+          <div style={{ marginBottom: 20 }}>
+            <label>Select Level: </label>
+            <select value={level} onChange={e => setLevel(e.target.value)}>
+              <option value="a1">A1</option>
+              <option value="a2">A2</option>
+              <option value="b1">B1</option>
+            </select>
           </div>
 
+          {/* CHUNK BUTTONS */}
+          <div style={styles.flexWrap}>
+            {words.length === 0 ? (
+              <p>Loading words…</p>
+            ) : (
+              Array.from({ length: totalChunks }).map((_, i) => (
+                <button
+                  key={i}
+                  style={styles.button}
+                  onClick={() => startQuiz(i)}
+                >
+                  Words {i * CHUNK_SIZE + 1} - {Math.min((i + 1) * CHUNK_SIZE, words.length)}
+                </button>
+              ))
+            )}
+          </div>
+
+          {/* REVIEW LISTS */}
           {reviewLists.length > 0 && (
             <div style={{ marginTop: 30 }}>
               <h3 style={styles.h3}>My Review Lists</h3>
@@ -234,11 +261,11 @@ export default function App() {
 
         {selected && (
           <>
-            <p style = {styles.h6}>Correct: <strong>{word.article}</strong></p>
+            <p style={styles.h6}>Correct: <strong>{word.article}</strong></p>
             {!showEnglish ? (
               <button style={styles.showEnglishButton} onClick={() => setShowEnglish(true)}>Show English</button>
             ) : (
-              <p style = {styles.h6}>{word.english}</p>
+              <p style={styles.h6}>{word.english}</p>
             )}
             <button style={styles.nextButton} onClick={nextWord}>Next</button>
           </>
@@ -249,75 +276,15 @@ export default function App() {
 }
 
 const styles = {
-  outer: {
-    minHeight: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-    background: "linear-gradient(to bottom, #8ea4bd, #dbe6f0)",
-    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-  },
-  container: {
-    width: "100%",
-    maxWidth: 600,
-    textAlign: "center",
-    background: "#ffffffcc",
-    borderRadius: 12,
-    boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
-    padding: "20px 15px",
-    boxSizing: "border-box",
-  },
+  outer: { minHeight: "100vh", display: "flex", justifyContent: "center", alignItems: "center", padding: "20px", background: "linear-gradient(to bottom, #8ea4bd, #dbe6f0)", fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif" },
+  container: { width: "100%", maxWidth: 600, textAlign: "center", background: "#ffffffcc", borderRadius: 12, boxShadow: "0 4px 12px rgba(0,0,0,0.1)", padding: "20px 15px", boxSizing: "border-box" },
   h1: { fontSize: "2rem", marginBottom: 16, color: "#333" },
   h2: { fontSize: "1.5rem", marginBottom: 12, color: "#444" },
   h3: { fontSize: "1.2rem", marginBottom: 10, color: "#555" },
   h6: { fontSize: "1.2rem", marginBottom: 10, color: "#555" },
-
-  button: {
-    background: "#4caf50",
-    color: "#fff",
-    border: "none",
-    borderRadius: 8,
-    padding: "10px 18px",
-    cursor: "pointer",
-    fontSize: 16,
-    transition: "all 0.2s ease",
-  },
-  nextButton: {
-    marginTop: 12,
-    padding: "10px 18px",
-    fontSize: 16,
-    borderRadius: 8,
-    cursor: "pointer",
-    border: "none",
-    background: "#1976d2",
-    color: "#fff",
-    transition: "background 0.2s ease",
-  },
-  showEnglishButton: {
-    marginTop: 12,
-    padding: "10px 18px",
-    fontSize: 16,
-    borderRadius: 8,
-    cursor: "pointer",
-    border: "none",
-    background: "#4caf50", // bright green, better for visibility
-    color: "#fff",
-    transition: "background 0.2s ease",
-  },
-  flexWrap: {
-    display: "flex",
-    flexWrap: "wrap",
-    gap: 10,
-    justifyContent: "center",
-    marginBottom: 20,
-  },
-  checkboxLabel: {
-    display: "flex",
-    alignItems: "center",
-    gap: 8,
-    marginBottom: 8,
-    fontSize: 16,
-    color: "#333",
-  },
+  button: { background: "#4caf50", color: "#fff", border: "none", borderRadius: 8, padding: "10px 18px", cursor: "pointer", fontSize: 16, transition: "all 0.2s ease" },
+  nextButton: { marginTop: 12, padding: "10px 18px", fontSize: 16, borderRadius: 8, cursor: "pointer", border: "none", background: "#1976d2", color: "#fff", transition: "background 0.2s ease" },
+  showEnglishButton: { marginTop: 12, padding: "10px 18px", fontSize: 16, borderRadius: 8, cursor: "pointer", border: "none", background: "#4caf50", color: "#fff", transition: "background 0.2s ease" },
+  flexWrap: { display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", marginBottom: 20 },
+  checkboxLabel: { display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontSize: 16, color: "#333" },
 };

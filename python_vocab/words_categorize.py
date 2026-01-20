@@ -1,7 +1,7 @@
 import json
 
-input_file="a1_nouns_output.json"
-output_file = "a1_nouns_clean.json"
+input_file="b1_nouns_output.json"
+output_file = "b1_nouns_clean.json"
 
 with open(input_file, "r", encoding="utf-8") as f:
     data = json.load(f)

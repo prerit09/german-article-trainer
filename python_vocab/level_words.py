@@ -1,6 +1,6 @@
 import json
 
-output_file="a1_nouns_output.json"
+output_file="b1_nouns_output.json"
 
 with open("german.json", "r", encoding="utf-8") as f:
     data = json.load(f)
@@ -9,7 +9,7 @@ a1 = []
 a2 = []
 b1 = []
 for item in data:
-    if(item["pos"]=="noun" and item["cefr_level"]=="A1"):
+    if(item["pos"]=="noun" and item["cefr_level"]=="B1"):
         a1.append(item)
     # if(item["pos"]=="noun" and item["cefr_level"]=="A2"):
     #     a2.append(item)
