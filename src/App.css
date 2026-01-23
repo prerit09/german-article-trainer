@@ -63,3 +63,15 @@
   background-position: right 10px center;
   background-size: 18px;
 }
+
+.section-divider {
+  margin: 28px 0;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d1d5db,
+    transparent
+  );
+}

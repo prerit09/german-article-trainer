@@ -187,6 +187,8 @@ export default function App() {
             )}
           </div>
 
+          <hr className="section-divider" />
+
           {/* REVIEW LISTS */}
           {reviewLists.length > 0 && (
             <div style={{ marginTop: 30 }}>
