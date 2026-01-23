@@ -155,7 +155,20 @@ export default function App() {
           <h1 style={styles.h1}>German Trainer</h1>
           <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
 
-    
+          {/* LEVEL SELECTOR */}
+          <div className="level-selector">
+            <h3 style={styles.h3}>Select Level:</h3>
+
+            <select
+              value={level}
+              onChange={e => setLevel(e.target.value)}
+              className="level-dropdown"
+            >
+              <option value="a1">A1</option>
+              <option value="a2">A2</option>
+              <option value="b1">B1</option>
+            </select>
+          </div>
           
           <hr className="section-divider" />
 
