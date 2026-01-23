@@ -169,6 +169,8 @@ export default function App() {
               <option value="b1">B1</option>
             </select>
           </div>
+          
+          <hr className="section-divider" />
 
           {/* CHUNK BUTTONS */}
           <div style={styles.flexWrap}>
