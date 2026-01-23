@@ -49,15 +49,21 @@
   border: 2px solid #bbb;
   background-color: #ffffff;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
 
-.level-dropdown:hover {
-  border-color: #666;
+  /* IMPORTANT */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* custom arrow spacing */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
 }
 
 .level-dropdown:focus {
   outline: none;
-  border-color: #4f46e5; /* nice blue */
+  border-color: #4f46e5;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
 }
