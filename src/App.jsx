@@ -155,9 +155,14 @@ export default function App() {
           <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
 
           {/* LEVEL SELECTOR */}
-          <div style={{ marginBottom: 20 }}>
-            <h3 style={styles.h3}>Select Level: </h3>
-            <select value={level} onChange={e => setLevel(e.target.value)}>
+          <div className="level-selector">
+            <h3 style={styles.h3}>Select Level:</h3>
+
+            <select
+              value={level}
+              onChange={e => setLevel(e.target.value)}
+              className="level-dropdown"
+            >
               <option value="a1">A1</option>
               <option value="a2">A2</option>
               <option value="b1">B1</option>
@@ -316,4 +321,5 @@ const styles = {
   showEnglishButton: { marginTop: 12, padding: "10px 18px", fontSize: 16, borderRadius: 8, cursor: "pointer", border: "none", background: "#4caf50", color: "#fff", transition: "background 0.2s ease" },
   flexWrap: { display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", marginBottom: 20 },
   checkboxLabel: { display: "flex", alignItems: "center", gap: 8, marginBottom: 8, fontSize: 16, color: "#333" },
+  
 };
