@@ -40,3 +40,24 @@
 .read-the-docs {
   color: #888;
 }
+
+.level-dropdown {
+  width: 220px;
+  padding: 14px 18px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 2px solid #bbb;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.level-dropdown:hover {
+  border-color: #666;
+}
+
+.level-dropdown:focus {
+  outline: none;
+  border-color: #4f46e5; /* nice blue */
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
