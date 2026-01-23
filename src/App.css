@@ -40,18 +40,16 @@
 .read-the-docs {
   color: #888;
 }
-
 .level-dropdown {
   width: 220px;
-
-  /* FIX SIZE */
-  padding: 8px 14px;        /* ↓ reduce padding */
-  font-size: 16px;          /* ↓ slightly smaller text */
-  line-height: 1.2;         /* IMPORTANT */
+  padding: 8px 40px 8px 14px; /* extra right padding for arrow */
+  font-size: 16px;
+  line-height: 1.2;
 
   border-radius: 10px;
   border: 2px solid #bbb;
   background-color: #ffffff;
+  color: #333;
   cursor: pointer;
 
   appearance: none;
@@ -62,6 +60,10 @@
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 18px;
+}
+
+.level-dropdown option {
+  color: #333;
 }
 
 .section-divider {
