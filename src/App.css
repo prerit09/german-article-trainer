@@ -77,13 +77,15 @@
 .byline {
   font-size: 12px;
   margin-top: -10px;
+  letter-spacing: 0.3px;
   margin-bottom: 16px;
-  font-weight: 400;
-  color: #555;          /* light mode */
+  font-weight: 600;     /* bold but not heavy */
+  font-style: italic;  /* italic */
+  color: #555;
 }
 
 @media (prefers-color-scheme: dark) {
   .byline {
-    color: #bbb;        /* dark mode */
+    color: #bbb;
   }
 }
