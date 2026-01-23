@@ -153,6 +153,7 @@ export default function App() {
       <div style={styles.outer}>
         <div style={styles.container}>
           <h1 style={styles.h1}>German Trainer</h1>
+          <p style={styles.byline}>by Prerit Jain</p>
           <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
 
           {/* LEVEL SELECTOR */}
