@@ -156,7 +156,7 @@ export default function App() {
 
           {/* LEVEL SELECTOR */}
           <div style={{ marginBottom: 20 }}>
-            <label>Select Level: </label>
+            <h3 style={styles.h3}>Select Level: </h3>
             <select value={level} onChange={e => setLevel(e.target.value)}>
               <option value="a1">A1</option>
               <option value="a2">A2</option>
