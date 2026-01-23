@@ -152,7 +152,7 @@ export default function App() {
     return (
       <div style={styles.outer}>
         <div style={styles.container}>
-          <h1 style={styles.h1}>German Trainer</h1>
+          <h1 style={styles.h1}>Vokabix</h1>
           <p className="byline">by Prerit Jain</p>
           <h3 style={styles.h3}>Start Quiz (Chunks of 25 words)</h3>
 
