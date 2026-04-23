@@ -39,6 +39,7 @@ export default function App() {
       case "b1-ch-2-adjectiv": return import.meta.env.BASE_URL + "data/b1-ch-2-adjectiv.json";
       case "b1-ch-3": return import.meta.env.BASE_URL + "data/b1-ch-3.json";
       case "b1-ch-4": return import.meta.env.BASE_URL + "data/b1-ch-4.json";
+      case "b1-ch-5": return import.meta.env.BASE_URL + "data/b1-ch-5.json";
       default: throw new Error("Unknown level: " + level);
     }
   }
@@ -203,6 +204,7 @@ export default function App() {
               <option value="fixed-preposition-different-meaning">Feste Präposition - Different Than English </option>
               <option value="b1-ch-3">B1 - Einheit - 3</option>
               <option value="b1-ch-4">B1 - Einheit - 4</option>
+              <option value="b1-ch-5">B1 - Einheit - 5</option>
               {/* <option value="a1">A1</option>
               <option value="a2">A2</option>
               <option value="b1">B1</option> */}
