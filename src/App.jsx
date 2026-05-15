@@ -42,6 +42,8 @@ export default function App() {
       case "b1-ch-5": return import.meta.env.BASE_URL + "data/b1-ch-5.json";
       case "b1-ch-6": return import.meta.env.BASE_URL + "data/b1-ch-6.json";
       case "b1-ch-7": return import.meta.env.BASE_URL + "data/b1-ch-7.json";
+      case "b1-nvv": return import.meta.env.BASE_URL + "data/b1-nvv.json";
+      case "b1-ch-8": return import.meta.env.BASE_URL + "data/b1-ch-8.json";
       default: throw new Error("Unknown level: " + level);
     }
   }
@@ -209,6 +211,8 @@ export default function App() {
               <option value="b1-ch-5">B1 - Einheit - 5</option>
               <option value="b1-ch-6">B1 - Einheit - 6</option>
               <option value="b1-ch-7">B1 - Einheit - 7</option>
+              <option value="b1-nvv">B1 - Nomen Verb Verbindung</option>
+              <option value="b1-ch-8">B1 - Einheit - 8</option>
               {/* <option value="a1">A1</option>
               <option value="a2">A2</option>
               <option value="b1">B1</option> */}
